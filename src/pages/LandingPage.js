@@ -1,10 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from "parts/Header";
+import Hero from "parts/Hero";
 
-export default function LandingPage() {
-  return (
-    <>
-      <Header {...this.props}></Header>
-    </>
-  );
+import landingPage from "json/landingPage.json";
+
+export default class LandingPage extends Component {
+  render() {
+    return (
+      <>
+        <Header {...this.props} />
+        <Hero data={landingPage.hero} />
+      </>
+    );
+  }
 }
